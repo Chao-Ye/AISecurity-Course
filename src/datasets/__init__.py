@@ -1,0 +1,2 @@
+from .cifar10_dataset import get_test_dataset
+from .cifar10_dataset import get_train_dataset
