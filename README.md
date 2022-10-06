@@ -1,5 +1,5 @@
 # AISecurity-Course Assignment
-This repository is an assignment for the Artificial Intelligence Security course at Zhejiang University's School of Software Technology.I implemente an image classification model on the CIFAR10 dataset and try to modify some hyperparameters.
+This repository is an assignment for the Artificial Intelligence Security course at Zhejiang University's School of Software Technology. I implemente an image classification model on the CIFAR10 dataset and try to modify some hyperparameters.
 
 ## Table of contents
 
@@ -35,14 +35,14 @@ pip install -r requirement.txt
 ```
 python train.py --use_dropout
 ```
-We also support modifying runtime parameters, such as the training device(cpu/cuda) and the number of training epochs.Seeing train.py for details.
+We also support modifying runtime parameters, such as the training device(cpu/cuda) and the number of training epochs. Seeing train.py for details.
 
 
 ## Tuning a hyper-parameter
 
 <img src="result_image/LeNet_result.jpg" />
 
-As you can see, this picture shows my initial training results.It is not difficult to find that as the number of training epochs increases, the loss value is decreasing and the accuracy on the training set is increasing. However, there is a huge accuracy gap between the test set and the training set, and the accuracy on the test set shows a decreasing trend in the later stages.I analyzed that the model was overfitting on the training data, so I added some regularization means. Specifically, I used the dropout on the first two linear layers of LeNet.The result is as follows:
+As you can see, this picture shows my initial training results. It is not difficult to find that as the number of training epochs increases, the loss value is decreasing and the accuracy on the training set is increasing. However, there is a huge accuracy gap between the test set and the training set, and the accuracy on the test set shows a decreasing trend in the later stages. I analyzed that the model was overfitting on the training data, so I added some regularization means. Specifically, I used the dropout on the first two linear layers of LeNet.The result is as follows:
 
 <img src="result_image/LeNet_dropout_result.jpg" />
 
