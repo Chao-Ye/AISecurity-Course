@@ -49,7 +49,7 @@ As you can see, this picture shows my initial training results.It is not difficu
 The results show that the model has better generalizability after using the dropout.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE](https://opensource.org/licenses/mit-license) file for details
 
 ## Acknowledgments
 * Song Jie Teacher
