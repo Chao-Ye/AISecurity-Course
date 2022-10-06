@@ -6,6 +6,8 @@ This repository is an assignment for the Artificial Intelligence Security course
 * [Introduction](#introduction)
 * [Installation and running](#installation-and-running)
 * [Tuning a hyper-parameter](#tuning-a-hyper-parameter)
+* [License](#license)
+* [Acknowledgments](#acknowledgments)
 
 
 ## Introduction
