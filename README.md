@@ -3,6 +3,9 @@ This repository is an assignment for the Artificial Intelligence Security course
 
 ## Table of contents
 
+* [Introduction](#introduction)
+* [Installation and running](#installation-and-running)
+* [Tuning a hyper-parameter](#tuning-a-hyper-parameter)
 
 
 ## Introduction
@@ -43,6 +46,12 @@ As you can see, this picture shows my initial training results.It is not difficu
 
 The results show that the model has better generalizability after using the dropout.
 
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+## Acknowledgments
+* Song Jie Teacher
+* All teaching assistants for the Artificial Intelligence Security course
 
 
 
