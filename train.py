@@ -22,7 +22,7 @@ class Trainer():
     def __init__(self, args):
         self.args = args
 
-        self.net = LeNet()
+        self.net = LeNet(args.use_dropout)
         self.net.to(args.device)
         self.optimizer = torch.optim.Adam(self.net.parameters(), lr=args.learning_rate)
         self.loss_function = nn.CrossEntropyLoss()
@@ -120,7 +120,7 @@ class Trainer():
         image_save_dir = os.path.join(args.dir, 'result')
         if not os.path.exists(image_save_dir):
             os.mkdir(image_save_dir)
-        image_save_file = os.path.join(image_save_dir, 'LeNet_result.jpg')
+        image_save_file = os.path.join(image_save_dir, 'LeNet_dropout_result.jpg')
 
         x = range(1, args.epochs+1)
         fig, ax1 = plt.subplots()
@@ -146,15 +146,20 @@ def main():
     parser = argparse.ArgumentParser()
 
     parser.add_argument('--seed', type=int, default=0, help="random seed for initialization and dataset shuffling")
-    parser.add_argument("--num_workers", type=int, default=4, help="")
+    parser.add_argument("--num_workers", type=int, default=4)
+    parser.add_argument('--device', type=str, default='cpu', help='cpu or gpu')
     
     parser.add_argument("--learning_rate", type=float, default=3e-4, help="The initial learning rate for optimizer.")
     parser.add_argument("--train_batch_size", type=int, default=24, help="Amount of train data per batch.")
     parser.add_argument("--test_batch_size", type=int, default=64, help="Amount of test data per batch.")
     parser.add_argument("--epochs", type=int, default=50, help="Total number of training epochs to perform.")
+    parser.add_argument('--use_dropout', action='store_true', help='whether use dropout')
 
     args = parser.parse_args()
     args.dir = os.path.dirname(os.path.abspath(__file__))
+
+    if(args.use_dropout):
+        print('use dropout!')
 
     # 设置cpu/gpu & 固定随机种子
     set_device(args)
