@@ -13,7 +13,7 @@ This repository is an assignment for the Artificial Intelligence Security course
 ## Introduction
 
 * Dateset : [CIFAR10](https://www.cs.toronto.edu/~kriz/cifar.html)
-* Model : I refer to the classic [LeNet](http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf) framework, but use MaxPool layer and ReLU activation functions.If you want to try other networks, you can add your own model files in ./src/models.
+* Model : I refer to the classic [LeNet](http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf) framework, but use MaxPool layer and ReLU activation functions. If you want to try other networks, you can add your own model files in ./src/models.
 * In Experiment, I trained the model for 50 epochs and use Adam optimizer with learning rate 3e-4.
 
 
